@@ -7,16 +7,28 @@ Updates hardcoded values in src/App.jsx.
 import os
 import re
 import sys
+import tempfile
 import snowflake.connector
+from cryptography.hazmat.primitives import serialization
+from cryptography.hazmat.backends import default_backend
 
 def get_snowflake_conn():
+    private_key_pem = os.environ["SNOWFLAKE_PRIVATE_KEY"].encode()
+    private_key = serialization.load_pem_private_key(
+        private_key_pem, password=None, backend=default_backend()
+    )
+    private_key_der = private_key.private_bytes(
+        encoding=serialization.Encoding.DER,
+        format=serialization.PrivateFormat.PKCS8,
+        encryption_algorithm=serialization.NoEncryption(),
+    )
     return snowflake.connector.connect(
         account=os.environ["SNOWFLAKE_ACCOUNT"],
         user=os.environ["SNOWFLAKE_USER"],
-        password=os.environ["SNOWFLAKE_PASSWORD"],
-        warehouse=os.environ.get("SNOWFLAKE_WAREHOUSE", "COMPUTE_WH"),
+        private_key=private_key_der,
+        warehouse=os.environ.get("SNOWFLAKE_WAREHOUSE", "CLAUDE_SNOWFLAKE_AI_WH"),
         database="DBT_ANALYTICS_PROD",
-        role=os.environ.get("SNOWFLAKE_ROLE", ""),
+        role=os.environ.get("SNOWFLAKE_ROLE", "CLAUDE_SNOWFLAKE_AI_ROLE"),
     )
 
 def run_query(cur, sql):
