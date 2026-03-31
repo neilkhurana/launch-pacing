@@ -20,32 +20,34 @@ const mono = "'JetBrains Mono', 'SF Mono', 'Consolas', monospace";
 const sans = "'DM Sans', system-ui, -apple-system, sans-serif";
 
 const cohortHistorical = [
-  { c: "Jan 25", cw: 477, m0: 175, m1: 200, m2: 33, m3: 17, nl: 52,  p0: 0.367, p1: 0.786, p2: 0.85535, p3: 0.89099 },
-  { c: "Feb 25", cw: 437, m0: 134, m1: 177, m2: 36, m3: 23, nl: 67,  p0: 0.307, p1: 0.712, p2: 0.79405, p3: 0.84668 },
-  { c: "Mar 25", cw: 535, m0: 129, m1: 222, m2: 58, m3: 28, nl: 98,  p0: 0.241, p1: 0.656, p2: 0.76449, p3: 0.81682 },
-  { c: "Apr 25", cw: 572, m0: 146, m1: 228, m2: 53, m3: 36, nl: 109,  p0: 0.255, p1: 0.654, p2: 0.7465, p3: 0.80944 },
-  { c: "May 25", cw: 580, m0: 138, m1: 244, m2: 90, m3: 42, nl: 66,  p0: 0.238, p1: 0.659, p2: 0.81379, p3: 0.88621 },
-  { c: "Jun 25", cw: 588, m0: 137, m1: 254, m2: 65, m3: 24, nl: 108,  p0: 0.233, p1: 0.665, p2: 0.77551, p3: 0.81633 },
-  { c: "Jul 25", cw: 637, m0: 220, m1: 268, m2: 53, m3: 25, nl: 71,  p0: 0.345, p1: 0.766, p2: 0.84929, p3: 0.88854 },
-  { c: "Aug 25", cw: 618, m0: 209, m1: 224, m2: 59, m3: 34, nl: 92,  p0: 0.338, p1: 0.701, p2: 0.79612, p3: 0.85113 },
-  { c: "Sep 25", cw: 641, m0: 240, m1: 223, m2: 65, m3: 36, nl: 77,  p0: 0.374, p1: 0.722, p2: 0.82371, p3: 0.87988 },
-  { c: "Oct 25", cw: 771, m0: 276, m1: 255, m2: 80, m3: 28, nl: 132,  p0: 0.358, p1: 0.689, p2: 0.79248, p3: 0.82879 },
-  { c: "Nov 25", cw: 605, m0: 217, m1: 229, m2: 52, m3: 26, nl: 81,  p0: 0.359, p1: 0.737, p2: 0.82314, p3: 0.86612 },
-  { c: "Dec 25", cw: 831, m0: 289, m1: 304, m2: 77, m3: 16, nl: 145,  p0: 0.348, p1: 0.714, p2: 0.80626, p3: 0.82551 },
-  { c: "Jan 26", cw: 810, m0: 218, m1: 314, m2: 79, m3: 0, nl: 199,  p0: 0.269, p1: 0.657, p2: 0.75432, p3: null },
-  { c: "Feb 26", cw: 839, m0: 188, m1: 302, m2: 0, m3: 0, nl: 349,  p0: 0.224, p1: 0.584, p2: null, p3: null },
-  { c: "Mar 26", cw: 1042, m0: 166, m1: 0, m2: 0, m3: 0, nl: 876,  p0: 0.159, p1: 0.159, p2: null, p3: null },
+  { c: "Jan 25", cw: 477, m0: 175, m1: 200, m2: 33, m3: 17, nl: 52,  p0: .367, p1: .786, p2: .855, p3: .891 },
+  { c: "Feb 25", cw: 437, m0: 134, m1: 177, m2: 36, m3: 23, nl: 67,  p0: .307, p1: .712, p2: .794, p3: .847 },
+  { c: "Mar 25", cw: 535, m0: 129, m1: 222, m2: 58, m3: 28, nl: 98,  p0: .241, p1: .656, p2: .764, p3: .817 },
+  { c: "Apr 25", cw: 572, m0: 146, m1: 228, m2: 53, m3: 36, nl: 109, p0: .255, p1: .654, p2: .747, p3: .809 },
+  { c: "May 25", cw: 580, m0: 138, m1: 244, m2: 90, m3: 42, nl: 66,  p0: .238, p1: .659, p2: .814, p3: .886 },
+  { c: "Jun 25", cw: 588, m0: 137, m1: 254, m2: 65, m3: 24, nl: 108, p0: .233, p1: .665, p2: .776, p3: .816 },
+  { c: "Jul 25", cw: 637, m0: 220, m1: 268, m2: 53, m3: 25, nl: 71,  p0: .345, p1: .766, p2: .849, p3: .889 },
+  { c: "Aug 25", cw: 618, m0: 209, m1: 224, m2: 59, m3: 34, nl: 92,  p0: .338, p1: .701, p2: .796, p3: .851 },
+  { c: "Sep 25", cw: 641, m0: 240, m1: 223, m2: 65, m3: 36, nl: 77,  p0: .374, p1: .722, p2: .824, p3: .880 },
+  { c: "Oct 25", cw: 771, m0: 276, m1: 255, m2: 80, m3: 28, nl: 132, p0: .358, p1: .689, p2: .792, p3: .829 },
+  { c: "Nov 25", cw: 605, m0: 217, m1: 229, m2: 52, m3: 26, nl: 81,  p0: .359, p1: .737, p2: .823, p3: .866 },
+  { c: "Dec 25", cw: 831, m0: 289, m1: 304, m2: 77, m3: 14, nl: 147, p0: .348, p1: .714, p2: .806, p3: .823 },
+  { c: "Jan 26", cw: 810, m0: 218, m1: 314, m2: 77, m3: 0,  nl: 201, p0: .269, p1: .657, p2: .752, p3: null },
+  { c: "Feb 26", cw: 839, m0: 188, m1: 287, m2: 0,  m3: 0,  nl: 364, p0: .224, p1: .566, p2: null, p3: null },
 ];
 
-const AVG = { p0: 0.3136, p1: 0.70499, p2: 0.80339, p3: 0.85054 };
-const CUR = { decM3: 0.82551, janM2: 0.75432, febM1: 0.58403, marM0: 0.15931 };
+const AVG = { p0: 0.31358, p1: 0.70508, p2: 0.80333, p3: 0.85282 };
+const CUR = { decM3: 0.823, janM2: 0.752, febM1: 0.566, marM0: 0.159 };
+const MTD  = { preJan: 14, jan: 77, feb: 287, mar: 129 };
+const MTD_TOTAL = 519; // includes 12 from pre-Dec '25 cohorts
+const PREV = { preJan: 0.806, jan: 0.657, feb: 0.224, mar: 0 };
 const FIXED = { preJan: 831, jan: 810, feb: 839 };
 
 const defaultAdj = {
-  preJan: AVG.p3,
-  jan: AVG.p2,
-  feb: (AVG.p1 - AVG.p0) + CUR.febM0,
-  mar: CUR.febM0,
+  preJan: 0.831,
+  jan: 0.780,
+  feb: 0.702,
+  mar: 0.183,
 };
 
 const pf = (v) => `${(v * 100).toFixed(1)}%`;
@@ -152,7 +154,7 @@ const WaterfallChart = ({ data, color }) => {
 
 export default function Dashboard() {
   const [tab, setTab] = useState("model");
-  const [marchCW, setMarchCW] = useState(976);
+  const [marchCW, setMarchCW] = useState(974);
   const [adjRates, setAdjRates] = useState(defaultAdj);
   const [waterfallMode, setWaterfallMode] = useState("adjusted");
 
@@ -160,14 +162,14 @@ export default function Dashboard() {
 
   const model = useMemo(() => {
     const rows = [
-      { key: "preJan", label: "Dec '25", cw: FIXED.preJan, avgRate: AVG.p3, curRate: CUR.decM2, adjRate: adjRates.preJan, note: "M3+ avg" },
-      { key: "jan", label: "Jan '26", cw: FIXED.jan, avgRate: AVG.p2, curRate: CUR.janM1, adjRate: adjRates.jan, note: "M2 avg + delta" },
-      { key: "feb", label: "Feb '26", cw: FIXED.feb, avgRate: AVG.p1, curRate: CUR.febM0, adjRate: adjRates.feb, note: "M1 avg + delta" },
-      { key: "mar", label: "Mar '26", cw: marchCW, avgRate: AVG.p0, curRate: 0, adjRate: adjRates.mar, note: "M0 blend" },
+      { key: "preJan", label: "Dec '25", cw: FIXED.preJan, avgRate: AVG.p3, curRate: CUR.decM3, adjRate: adjRates.preJan, note: "M3+ avg", mtd: MTD.preJan, prevRate: PREV.preJan },
+      { key: "jan", label: "Jan '26", cw: FIXED.jan, avgRate: AVG.p2, curRate: CUR.janM2, adjRate: adjRates.jan, note: "M2 avg", mtd: MTD.jan, prevRate: PREV.jan },
+      { key: "feb", label: "Feb '26", cw: FIXED.feb, avgRate: AVG.p1, curRate: CUR.febM1, adjRate: adjRates.feb, note: "M1 avg", mtd: MTD.feb, prevRate: PREV.feb },
+      { key: "mar", label: "Mar '26", cw: marchCW, avgRate: AVG.p0, curRate: CUR.marM0, adjRate: adjRates.mar, note: "M0 avg", mtd: MTD.mar, prevRate: PREV.mar },
     ].map(r => ({
       ...r,
-      avgLaunches: r.cw * (r.avgRate - r.curRate),
-      adjLaunches: r.cw * (r.adjRate - r.curRate),
+      avgLaunches: r.cw * (r.avgRate - r.prevRate),
+      adjLaunches: r.cw * (r.adjRate - r.prevRate),
     }));
     return { rows, totalAvg: rows.reduce((s, r) => s + r.avgLaunches, 0), totalAdj: rows.reduce((s, r) => s + r.adjLaunches, 0) };
   }, [marchCW, adjRates]);
@@ -235,10 +237,10 @@ export default function Dashboard() {
               <div style={{ borderTop: `1px solid ${C.border}`, paddingTop: 16 }}>
                 <div style={{ fontSize: 11, fontWeight: 600, color: C.muted, textTransform: "uppercase", letterSpacing: "0.04em", marginBottom: 12 }}>Adjusted Activation Rates</div>
                 {[
-                  { k: "preJan", l: "Dec '25", n: "M3+ rate" },
-                  { k: "jan", l: "Jan '26", n: `Curr: ${pf(CUR.janM1)}` },
-                  { k: "feb", l: "Feb '26", n: `Curr: ${pf(CUR.febM0)}` },
-                  { k: "mar", l: "Mar '26", n: "M0 blend" },
+                  { k: "preJan", l: "Dec '25", n: `Curr: ${pf(CUR.decM3)}` },
+                  { k: "jan", l: "Jan '26", n: `Curr: ${pf(CUR.janM2)}` },
+                  { k: "feb", l: "Feb '26", n: `Curr: ${pf(CUR.febM1)}` },
+                  { k: "mar", l: "Mar '26", n: `Curr: ${pf(CUR.marM0)}` },
                 ].map(({ k, l, n }) => (
                   <div key={k} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "6px 0" }}>
                     <div>
@@ -250,12 +252,12 @@ export default function Dashboard() {
                 ))}
               </div>
               <div style={{ marginTop: 16, display: "flex", flexDirection: "column", gap: 6 }}>
-                <button onClick={() => { setAdjRates(defaultAdj); setMarchCW(976); }} style={{
+                <button onClick={() => { setAdjRates(defaultAdj); setMarchCW(974); }} style={{
                   width: "100%", background: C.bg, border: `1px solid ${C.border}`,
                   borderRadius: 6, color: C.muted, fontSize: 12, fontWeight: 500, padding: "7px 0",
                   cursor: "pointer", fontFamily: sans,
                 }}>Reset all defaults</button>
-                <button onClick={() => setMarchCW(976)} style={{
+                <button onClick={() => setMarchCW(974)} style={{
                   width: "100%", background: "transparent", border: `1px solid ${C.border}`,
                   borderRadius: 6, color: C.muted, fontSize: 12, fontWeight: 500, padding: "7px 0",
                   cursor: "pointer", fontFamily: sans,
@@ -275,6 +277,7 @@ export default function Dashboard() {
                   <tr>
                     <th style={{ ...th, textAlign: "left" }}>Cohort</th>
                     <th style={th}>Closed Won</th>
+                    <th style={th}>Mar Launches (Act.)</th>
                     <th style={th}>Current Rate</th>
                     <th style={th}>Avg Rate</th>
                     <th style={th}>Avg Launches</th>
@@ -287,6 +290,7 @@ export default function Dashboard() {
                     <tr key={i}>
                       <td style={{ ...td, textAlign: "left", fontFamily: sans, fontWeight: 600 }}>{r.label}</td>
                       <td style={{ ...td, color: r.key === "mar" ? C.purple : C.text, fontWeight: r.key === "mar" ? 600 : 400 }}>{r.cw.toLocaleString()}</td>
+                      <td style={{ ...td, color: C.amber, fontWeight: 600 }}>{r.mtd}</td>
                       <td style={{ ...td, color: C.dim }}>{pf(r.curRate)}</td>
                       <td style={{ ...td, color: C.blue }}>{pf(r.avgRate)}</td>
                       <td style={{ ...td, color: C.blue, fontWeight: 600 }}>{Math.round(r.avgLaunches)}</td>
@@ -297,6 +301,10 @@ export default function Dashboard() {
                   <tr style={{ borderTop: `2px solid ${C.text}` }}>
                     <td style={{ ...td, textAlign: "left", fontFamily: sans, fontWeight: 700, fontSize: 14, borderBottom: "none" }}>Total</td>
                     <td style={{ ...td, borderBottom: "none" }} />
+                    <td style={{ ...td, color: C.amber, fontWeight: 700, fontSize: 14, borderBottom: "none" }}>
+                      {MTD_TOTAL}
+                      <div style={{ fontSize: 10, color: C.dim, fontWeight: 400, fontFamily: sans }}>incl. 12 from pre-Dec '25</div>
+                    </td>
                     <td style={{ ...td, borderBottom: "none" }} />
                     <td style={{ ...td, borderBottom: "none" }} />
                     <td style={{ ...td, color: C.blue, fontWeight: 700, fontSize: 14, borderBottom: "none" }}>{Math.round(model.totalAvg)}</td>
