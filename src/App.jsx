@@ -20,7 +20,7 @@ const mono = "'JetBrains Mono', 'SF Mono', 'Consolas', monospace";
 const sans = "'DM Sans', system-ui, -apple-system, sans-serif";
 
 const cohortHistorical = [
-  { c: "Jan 25", cw: 477, m0: 175, m1: 200, m2: 33, m3: 17, nl: 52,  p0: 0.367, p1: 0.786, p2: 0.85535, p3: 0.89099 },
+  { c: "Jan 25", cw: 477, m0: 175, m1: 200, m2: 33, m3: 17, nl: 52,  p0: 0.367, p1: 0.786, p2: 0.85534, p3: 0.89099 },
   { c: "Feb 25", cw: 437, m0: 134, m1: 177, m2: 36, m3: 23, nl: 67,  p0: 0.307, p1: 0.712, p2: 0.79405, p3: 0.84668 },
   { c: "Mar 25", cw: 535, m0: 129, m1: 221, m2: 58, m3: 28, nl: 99,  p0: 0.241, p1: 0.654, p2: 0.76262, p3: 0.81495 },
   { c: "Apr 25", cw: 572, m0: 146, m1: 228, m2: 53, m3: 36, nl: 109,  p0: 0.255, p1: 0.654, p2: 0.7465, p3: 0.80944 },
@@ -29,19 +29,19 @@ const cohortHistorical = [
   { c: "Jul 25", cw: 637, m0: 220, m1: 268, m2: 53, m3: 25, nl: 71,  p0: 0.345, p1: 0.766, p2: 0.84929, p3: 0.88854 },
   { c: "Aug 25", cw: 618, m0: 209, m1: 224, m2: 59, m3: 34, nl: 92,  p0: 0.338, p1: 0.701, p2: 0.79612, p3: 0.85113 },
   { c: "Sep 25", cw: 641, m0: 240, m1: 223, m2: 65, m3: 36, nl: 77,  p0: 0.374, p1: 0.722, p2: 0.82371, p3: 0.87988 },
-  { c: "Oct 25", cw: 771, m0: 276, m1: 255, m2: 79, m3: 28, nl: 133,  p0: 0.358, p1: 0.689, p2: 0.79118, p3: 0.8275 },
+  { c: "Oct 25", cw: 771, m0: 276, m1: 255, m2: 79, m3: 28, nl: 133,  p0: 0.358, p1: 0.689, p2: 0.79117, p3: 0.8275 },
   { c: "Nov 25", cw: 605, m0: 217, m1: 229, m2: 52, m3: 27, nl: 80,  p0: 0.359, p1: 0.737, p2: 0.82314, p3: 0.86777 },
-  { c: "Dec 25", cw: 831, m0: 289, m1: 304, m2: 77, m3: 20, nl: 141,  p0: 0.348, p1: 0.714, p2: 0.80626, p3: 0.83032 },
+  { c: "Dec 25", cw: 831, m0: 289, m1: 304, m2: 77, m3: 20, nl: 141,  p0: 0.348, p1: 0.714, p2: 0.80626, p3: 0.83031 },
   { c: "Jan 26", cw: 810, m0: 218, m1: 314, m2: 95, m3: 5, nl: 178,  p0: 0.269, p1: 0.657, p2: 0.77407, p3: 0.78025 },
-  { c: "Feb 26", cw: 839, m0: 188, m1: 338, m2: 35, m3: 0, nl: 278,  p0: 0.224, p1: 0.627, p2: 0.66865, p3: null },
-  { c: "Mar 26", cw: 1142, m0: 217, m1: 67, m2: 0, m3: 0, nl: 858,  p0: 0.19, p1: 0.249, p2: null, p3: null },
-  { c: "Apr 26", cw: 275, m0: 0, m1: 0, m2: 0, m3: 0, nl: 275,  p0: 0.0, p1: 0.0, p2: null, p3: null },
+  { c: "Feb 26", cw: 839, m0: 188, m1: 338, m2: 36, m3: 0, nl: 277,  p0: 0.224, p1: 0.627, p2: 0.66984, p3: null },
+  { c: "Mar 26", cw: 1142, m0: 217, m1: 69, m2: 0, m3: 0, nl: 856,  p0: 0.19, p1: 0.25, p2: null, p3: null },
+  { c: "Apr 26", cw: 277, m0: 0, m1: 0, m2: 0, m3: 0, nl: 277,  p0: 0, p1: 0, p2: null, p3: null },
 ];
 
 const AVG = { p0: 0.3136, p1: 0.70484, p2: 0.80313, p3: 0.85081 };
-const CUR = { decM3: 0.83032, janM2: 0.77407, febM1: 0.62694, marM0: 0.19002 };
-const MTD  = { preJan: 1, jan: 5, feb: 35, mar: 67 };
-const MTD_TOTAL = 108; // includes 0 from pre-Dec '25 cohorts
+const CUR = { decM3: 0.83031, janM2: 0.77407, febM1: 0.62693, marM0: 0.19003 };
+const MTD  = { preJan: 19, jan: 95, feb: 338, mar: 217 };
+const MTD_TOTAL = 683; // includes 14 from pre-Dec '25 cohorts
 const PREV = { preJan: 0.80626, jan: 0.65679, feb: 0.22408, mar: 0.0 };
 const FIXED = { preJan: 831, jan: 810, feb: 839 };
 
@@ -50,6 +50,20 @@ const defaultAdj = {
   jan: 0.780,
   feb: 0.702,
   mar: 0.183,
+};
+
+// April model — end-of-March rates as baseline
+const APR_PREV = { jan: 0.77407, feb: 0.62693, mar: 0.19003, apr: 0.0 };
+const APR_FIXED = { jan: 810, feb: 839, mar: 1142 };
+const APR_CUR  = { janM3: 0.78025, febM2: 0.66984, marM1: 0.25044, aprM0: 0.0 };
+const APR_MTD  = { jan: 5, feb: 36, mar: 69, apr: 0 };
+const APR_MTD_TOTAL = 111; // includes 1 from pre-Jan '26 cohorts
+
+const defaultAprAdj = {
+  jan: 0.78025,
+  feb: 0.66984,
+  mar: 0.25044,
+  apr: 0.0,
 };
 
 const pf = (v) => `${(v * 100).toFixed(1)}%`;
@@ -155,12 +169,16 @@ const WaterfallChart = ({ data, color }) => {
 };
 
 export default function Dashboard() {
-  const [tab, setTab] = useState("model");
-  const [marchCW, setMarchCW] = useState(974);
+  const [tab, setTab] = useState("aprilModel");
+  const [marchCW, setMarchCW] = useState(1142);
   const [adjRates, setAdjRates] = useState(defaultAdj);
   const [waterfallMode, setWaterfallMode] = useState("adjusted");
+  const [aprilCW, setAprilCW] = useState(1014);
+  const [aprilAdjRates, setAprilAdjRates] = useState(defaultAprAdj);
+  const [aprilWaterfallMode, setAprilWaterfallMode] = useState("adjusted");
 
   const setRate = useCallback((k, v) => setAdjRates(prev => ({ ...prev, [k]: v })), []);
+  const setAprilRate = useCallback((k, v) => setAprilAdjRates(prev => ({ ...prev, [k]: v })), []);
 
   const model = useMemo(() => {
     const rows = [
@@ -176,12 +194,33 @@ export default function Dashboard() {
     return { rows, totalAvg: rows.reduce((s, r) => s + r.avgLaunches, 0), totalAdj: rows.reduce((s, r) => s + r.adjLaunches, 0) };
   }, [marchCW, adjRates]);
 
+  const aprilModel = useMemo(() => {
+    const rows = [
+      { key: "jan", label: "Jan '26", cw: APR_FIXED.jan, avgRate: AVG.p3, curRate: APR_CUR.janM3, adjRate: aprilAdjRates.jan, note: "M3+ avg", mtd: APR_MTD.jan, prevRate: APR_PREV.jan },
+      { key: "feb", label: "Feb '26", cw: APR_FIXED.feb, avgRate: AVG.p2, curRate: APR_CUR.febM2, adjRate: aprilAdjRates.feb, note: "M2 avg", mtd: APR_MTD.feb, prevRate: APR_PREV.feb },
+      { key: "mar", label: "Mar '26", cw: APR_FIXED.mar, avgRate: AVG.p1, curRate: APR_CUR.marM1, adjRate: aprilAdjRates.mar, note: "M1 avg", mtd: APR_MTD.mar, prevRate: APR_PREV.mar },
+      { key: "apr", label: "Apr '26", cw: aprilCW, avgRate: AVG.p0, curRate: APR_CUR.aprM0, adjRate: aprilAdjRates.apr, note: "M0 avg", mtd: APR_MTD.apr, prevRate: APR_PREV.apr },
+    ].map(r => ({
+      ...r,
+      avgLaunches: r.cw * (r.avgRate - r.prevRate),
+      adjLaunches: r.cw * (r.adjRate - r.prevRate),
+    }));
+    return { rows, totalAvg: rows.reduce((s, r) => s + r.avgLaunches, 0), totalAdj: rows.reduce((s, r) => s + r.adjLaunches, 0) };
+  }, [aprilCW, aprilAdjRates]);
+
   const waterfallData = useMemo(() => {
     const isAdj = waterfallMode === "adjusted";
     const items = model.rows.map(r => ({ name: r.label, value: isAdj ? r.adjLaunches : r.avgLaunches, isTotal: false }));
     items.push({ name: "Total", value: isAdj ? model.totalAdj : model.totalAvg, isTotal: true });
     return items;
   }, [model, waterfallMode]);
+
+  const aprilWaterfallData = useMemo(() => {
+    const isAdj = aprilWaterfallMode === "adjusted";
+    const items = aprilModel.rows.map(r => ({ name: r.label, value: isAdj ? r.adjLaunches : r.avgLaunches, isTotal: false }));
+    items.push({ name: "Total", value: isAdj ? aprilModel.totalAdj : aprilModel.totalAvg, isTotal: true });
+    return items;
+  }, [aprilModel, aprilWaterfallMode]);
 
   const cumData = cohortHistorical.map(c => ({ cohort: c.c, "Cum M0%": c.p0, "Cum M1%": c.p1, "Cum M2%": c.p2, "Cum M3+%": c.p3 }));
 
@@ -198,7 +237,7 @@ export default function Dashboard() {
       </div>
 
       <div style={{ display: "flex", gap: 0, marginBottom: 24, borderBottom: `2px solid ${C.border}` }}>
-        {[{ k: "model", l: "March Model" }, { k: "historical", l: "Historical Activations" }].map(t => (
+        {[{ k: "model", l: "March Model" }, { k: "aprilModel", l: "April Model" }, { k: "historical", l: "Historical Activations" }].map(t => (
           <button key={t.k} onClick={() => setTab(t.k)} style={{
             background: "none", border: "none", borderBottom: tab === t.k ? `2px solid ${C.blue}` : "2px solid transparent",
             padding: "8px 20px", fontSize: 13, fontWeight: 600, cursor: "pointer", fontFamily: sans,
@@ -213,7 +252,7 @@ export default function Dashboard() {
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 12 }}>
               <h2 style={{ fontSize: 15, fontWeight: 600, margin: 0 }}>Expected March Launches by Cohort</h2>
               <div style={{ display: "flex", gap: 2, background: C.bg, borderRadius: 6, padding: 2, border: `1px solid ${C.border}` }}>
-                {[{ k: "average", l: "Average" }, { k: "adjusted", l: "Adjusted" }].map(t => (
+                {[{ k: "average", l: "Average" }, { k: "adjusted", l: "Projected" }].map(t => (
                   <button key={t.k} onClick={() => setWaterfallMode(t.k)} style={{
                     background: waterfallMode === t.k ? C.card : "transparent",
                     color: waterfallMode === t.k ? C.text : C.muted,
@@ -237,7 +276,7 @@ export default function Dashboard() {
                 <span style={{ fontSize: 11, color: C.dim, marginLeft: 8 }}>target</span>
               </div>
               <div style={{ borderTop: `1px solid ${C.border}`, paddingTop: 16 }}>
-                <div style={{ fontSize: 11, fontWeight: 600, color: C.muted, textTransform: "uppercase", letterSpacing: "0.04em", marginBottom: 12 }}>Adjusted Activation Rates</div>
+                <div style={{ fontSize: 11, fontWeight: 600, color: C.muted, textTransform: "uppercase", letterSpacing: "0.04em", marginBottom: 12 }}>Projected Activation Rates</div>
                 {[
                   { k: "preJan", l: "Dec '25", n: `Curr: ${pf(CUR.decM3)}` },
                   { k: "jan", l: "Jan '26", n: `Curr: ${pf(CUR.janM2)}` },
@@ -279,12 +318,12 @@ export default function Dashboard() {
                   <tr>
                     <th style={{ ...th, textAlign: "left" }}>Cohort</th>
                     <th style={th}>Closed Won</th>
+                    <th style={th}>Proj Rate</th>
+                    <th style={th}>Proj Launches</th>
                     <th style={th}>Mar Launches (Act.)</th>
                     <th style={th}>Current Rate</th>
                     <th style={th}>Avg Rate</th>
                     <th style={th}>Avg Launches</th>
-                    <th style={th}>Adj Rate</th>
-                    <th style={th}>Adj Launches</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -292,26 +331,138 @@ export default function Dashboard() {
                     <tr key={i}>
                       <td style={{ ...td, textAlign: "left", fontFamily: sans, fontWeight: 600 }}>{r.label}</td>
                       <td style={{ ...td, color: r.key === "mar" ? C.purple : C.text, fontWeight: r.key === "mar" ? 600 : 400 }}>{r.cw.toLocaleString()}</td>
+                      <td style={{ ...td, color: C.green }}>{pf(r.adjRate)}</td>
+                      <td style={{ ...td, color: C.green, fontWeight: 600 }}>{Math.round(r.adjLaunches)}</td>
                       <td style={{ ...td, color: C.amber, fontWeight: 600 }}>{r.mtd}</td>
                       <td style={{ ...td, color: C.dim }}>{pf(r.curRate)}</td>
                       <td style={{ ...td, color: C.blue }}>{pf(r.avgRate)}</td>
                       <td style={{ ...td, color: C.blue, fontWeight: 600 }}>{Math.round(r.avgLaunches)}</td>
-                      <td style={{ ...td, color: C.green }}>{pf(r.adjRate)}</td>
-                      <td style={{ ...td, color: C.green, fontWeight: 600 }}>{Math.round(r.adjLaunches)}</td>
                     </tr>
                   ))}
                   <tr style={{ borderTop: `2px solid ${C.text}` }}>
                     <td style={{ ...td, textAlign: "left", fontFamily: sans, fontWeight: 700, fontSize: 14, borderBottom: "none" }}>Total</td>
                     <td style={{ ...td, borderBottom: "none" }} />
+                    <td style={{ ...td, borderBottom: "none" }} />
+                    <td style={{ ...td, color: C.green, fontWeight: 700, fontSize: 14, borderBottom: "none" }}>{Math.round(model.totalAdj)}</td>
                     <td style={{ ...td, color: C.amber, fontWeight: 700, fontSize: 14, borderBottom: "none" }}>
                       {MTD_TOTAL}
-                      <div style={{ fontSize: 10, color: C.dim, fontWeight: 400, fontFamily: sans }}>incl. 12 from pre-Dec '25</div>
+                      <div style={{ fontSize: 10, color: C.dim, fontWeight: 400, fontFamily: sans }}>incl. 14 from pre-Dec '25</div>
                     </td>
                     <td style={{ ...td, borderBottom: "none" }} />
                     <td style={{ ...td, borderBottom: "none" }} />
                     <td style={{ ...td, color: C.blue, fontWeight: 700, fontSize: 14, borderBottom: "none" }}>{Math.round(model.totalAvg)}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </>
+      )}
+
+      {tab === "aprilModel" && (
+        <>
+          <div style={{ background: C.card, border: `1px solid ${C.border}`, borderRadius: 10, padding: "20px 24px", marginBottom: 20 }}>
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 12 }}>
+              <h2 style={{ fontSize: 15, fontWeight: 600, margin: 0 }}>Expected April Launches by Cohort</h2>
+              <div style={{ display: "flex", gap: 2, background: C.bg, borderRadius: 6, padding: 2, border: `1px solid ${C.border}` }}>
+                {[{ k: "average", l: "Average" }, { k: "adjusted", l: "Projected" }].map(t => (
+                  <button key={t.k} onClick={() => setAprilWaterfallMode(t.k)} style={{
+                    background: aprilWaterfallMode === t.k ? C.card : "transparent",
+                    color: aprilWaterfallMode === t.k ? C.text : C.muted,
+                    border: aprilWaterfallMode === t.k ? `1px solid ${C.border}` : "1px solid transparent",
+                    borderRadius: 5, padding: "4px 14px", fontSize: 12, fontWeight: 600,
+                    cursor: "pointer", fontFamily: sans, transition: "all 0.15s",
+                    boxShadow: aprilWaterfallMode === t.k ? "0 1px 3px rgba(0,0,0,0.06)" : "none",
+                  }}>{t.l}</button>
+                ))}
+              </div>
+            </div>
+            <WaterfallChart data={aprilWaterfallData} color={aprilWaterfallMode === "adjusted" ? C.green : C.blue} />
+          </div>
+
+          <div style={{ display: "flex", gap: 20, marginBottom: 20, alignItems: "flex-start" }}>
+            <div style={{ background: C.card, border: `1px solid ${C.border}`, borderRadius: 10, padding: "20px 24px", width: 300, flexShrink: 0 }}>
+              <h2 style={{ fontSize: 15, fontWeight: 600, margin: "0 0 16px" }}>Model Inputs</h2>
+              <div style={{ marginBottom: 16 }}>
+                <div style={{ fontSize: 11, fontWeight: 600, color: C.muted, textTransform: "uppercase", letterSpacing: "0.04em", marginBottom: 8 }}>April Closed Won</div>
+                <EditableNumber value={aprilCW} onChange={setAprilCW} />
+                <span style={{ fontSize: 11, color: C.dim, marginLeft: 8 }}>target</span>
+              </div>
+              <div style={{ borderTop: `1px solid ${C.border}`, paddingTop: 16 }}>
+                <div style={{ fontSize: 11, fontWeight: 600, color: C.muted, textTransform: "uppercase", letterSpacing: "0.04em", marginBottom: 12 }}>Projected Activation Rates</div>
+                {[
+                  { k: "jan", l: "Jan '26", n: `Curr: ${pf(APR_CUR.janM3)}` },
+                  { k: "feb", l: "Feb '26", n: `Curr: ${pf(APR_CUR.febM2)}` },
+                  { k: "mar", l: "Mar '26", n: `Curr: ${pf(APR_CUR.marM1)}` },
+                  { k: "apr", l: "Apr '26", n: `Curr: ${pf(APR_CUR.aprM0)}` },
+                ].map(({ k, l, n }) => (
+                  <div key={k} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "6px 0" }}>
+                    <div>
+                      <div style={{ fontSize: 13, fontWeight: 500 }}>{l}</div>
+                      <div style={{ fontSize: 11, color: C.dim }}>{n}</div>
+                    </div>
+                    <EditableRate value={aprilAdjRates[k]} onChange={v => setAprilRate(k, v)} />
+                  </div>
+                ))}
+              </div>
+              <div style={{ marginTop: 16, display: "flex", flexDirection: "column", gap: 6 }}>
+                <button onClick={() => { setAprilAdjRates(defaultAprAdj); setAprilCW(900); }} style={{
+                  width: "100%", background: C.bg, border: `1px solid ${C.border}`,
+                  borderRadius: 6, color: C.muted, fontSize: 12, fontWeight: 500, padding: "7px 0",
+                  cursor: "pointer", fontFamily: sans,
+                }}>Reset all defaults</button>
+                <button onClick={() => setAprilCW(900)} style={{
+                  width: "100%", background: "transparent", border: `1px solid ${C.border}`,
+                  borderRadius: 6, color: C.muted, fontSize: 12, fontWeight: 500, padding: "7px 0",
+                  cursor: "pointer", fontFamily: sans,
+                }}>Reset closed won target</button>
+                <button onClick={() => setAprilAdjRates(defaultAprAdj)} style={{
+                  width: "100%", background: "transparent", border: `1px solid ${C.border}`,
+                  borderRadius: 6, color: C.muted, fontSize: 12, fontWeight: 500, padding: "7px 0",
+                  cursor: "pointer", fontFamily: sans,
+                }}>Reset activation rates</button>
+              </div>
+            </div>
+
+            <div style={{ background: C.card, border: `1px solid ${C.border}`, borderRadius: 10, padding: "20px 24px", flex: 1, overflowX: "auto" }}>
+              <h2 style={{ fontSize: 15, fontWeight: 600, margin: "0 0 16px" }}>Model Detail</h2>
+              <table style={{ width: "100%", borderCollapse: "collapse" }}>
+                <thead>
+                  <tr>
+                    <th style={{ ...th, textAlign: "left" }}>Cohort</th>
+                    <th style={th}>Closed Won</th>
+                    <th style={th}>Proj Rate</th>
+                    <th style={th}>Proj Launches</th>
+                    <th style={th}>Apr Launches (Act.)</th>
+                    <th style={th}>Current Rate</th>
+                    <th style={th}>Avg Rate</th>
+                    <th style={th}>Avg Launches</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {aprilModel.rows.map((r, i) => (
+                    <tr key={i}>
+                      <td style={{ ...td, textAlign: "left", fontFamily: sans, fontWeight: 600 }}>{r.label}</td>
+                      <td style={{ ...td, color: r.key === "apr" ? C.purple : C.text, fontWeight: r.key === "apr" ? 600 : 400 }}>{r.cw.toLocaleString()}</td>
+                      <td style={{ ...td, color: C.green }}>{pf(r.adjRate)}</td>
+                      <td style={{ ...td, color: C.green, fontWeight: 600 }}>{Math.round(r.adjLaunches)}</td>
+                      <td style={{ ...td, color: C.amber, fontWeight: 600 }}>{r.mtd || "—"}</td>
+                      <td style={{ ...td, color: C.dim }}>{pf(r.curRate)}</td>
+                      <td style={{ ...td, color: C.blue }}>{pf(r.avgRate)}</td>
+                      <td style={{ ...td, color: C.blue, fontWeight: 600 }}>{Math.round(r.avgLaunches)}</td>
+                    </tr>
+                  ))}
+                  <tr style={{ borderTop: `2px solid ${C.text}` }}>
+                    <td style={{ ...td, textAlign: "left", fontFamily: sans, fontWeight: 700, fontSize: 14, borderBottom: "none" }}>Total</td>
                     <td style={{ ...td, borderBottom: "none" }} />
-                    <td style={{ ...td, color: C.green, fontWeight: 700, fontSize: 14, borderBottom: "none" }}>{Math.round(model.totalAdj)}</td>
+                    <td style={{ ...td, borderBottom: "none" }} />
+                    <td style={{ ...td, color: C.green, fontWeight: 700, fontSize: 14, borderBottom: "none" }}>{Math.round(aprilModel.totalAdj)}</td>
+                    <td style={{ ...td, color: C.amber, fontWeight: 700, fontSize: 14, borderBottom: "none" }}>
+                      {APR_MTD_TOTAL || "—"}
+                    </td>
+                    <td style={{ ...td, borderBottom: "none" }} />
+                    <td style={{ ...td, borderBottom: "none" }} />
+                    <td style={{ ...td, color: C.blue, fontWeight: 700, fontSize: 14, borderBottom: "none" }}>{Math.round(aprilModel.totalAvg)}</td>
                   </tr>
                 </tbody>
               </table>
