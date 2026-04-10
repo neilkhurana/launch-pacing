@@ -252,7 +252,7 @@ export default function Dashboard() {
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 12 }}>
               <h2 style={{ fontSize: 15, fontWeight: 600, margin: 0 }}>Expected March Launches by Cohort</h2>
               <div style={{ display: "flex", gap: 2, background: C.bg, borderRadius: 6, padding: 2, border: `1px solid ${C.border}` }}>
-                {[{ k: "average", l: "Average" }, { k: "adjusted", l: "Projected" }].map(t => (
+                {[{ k: "average", l: "Average" }, { k: "adjusted", l: "Adjusted" }].map(t => (
                   <button key={t.k} onClick={() => setWaterfallMode(t.k)} style={{
                     background: waterfallMode === t.k ? C.card : "transparent",
                     color: waterfallMode === t.k ? C.text : C.muted,
@@ -276,7 +276,7 @@ export default function Dashboard() {
                 <span style={{ fontSize: 11, color: C.dim, marginLeft: 8 }}>target</span>
               </div>
               <div style={{ borderTop: `1px solid ${C.border}`, paddingTop: 16 }}>
-                <div style={{ fontSize: 11, fontWeight: 600, color: C.muted, textTransform: "uppercase", letterSpacing: "0.04em", marginBottom: 12 }}>Projected Activation Rates</div>
+                <div style={{ fontSize: 11, fontWeight: 600, color: C.muted, textTransform: "uppercase", letterSpacing: "0.04em", marginBottom: 12 }}>Adjusted Activation Rates</div>
                 {[
                   { k: "preJan", l: "Dec '25", n: `Curr: ${pf(CUR.decM3)}` },
                   { k: "jan", l: "Jan '26", n: `Curr: ${pf(CUR.janM2)}` },
@@ -312,15 +312,18 @@ export default function Dashboard() {
             </div>
 
             <div style={{ background: C.card, border: `1px solid ${C.border}`, borderRadius: 10, padding: "20px 24px", flex: 1, overflowX: "auto" }}>
-              <h2 style={{ fontSize: 15, fontWeight: 600, margin: "0 0 16px" }}>Model Detail</h2>
+              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", marginBottom: 16 }}>
+                <h2 style={{ fontSize: 15, fontWeight: 600, margin: 0 }}>Model Detail</h2>
+                <span style={{ fontSize: 11, color: C.dim }}>Adjusted rates are based on manual inputs</span>
+              </div>
               <table style={{ width: "100%", borderCollapse: "collapse" }}>
                 <thead>
                   <tr>
                     <th style={{ ...th, textAlign: "left" }}>Cohort</th>
                     <th style={th}>Closed Won</th>
-                    <th style={th}>Proj Rate</th>
-                    <th style={th}>Proj Launches</th>
                     <th style={th}>Mar Launches (Act.)</th>
+                    <th style={th}>Adj Rate</th>
+                    <th style={th}>Adj Launches</th>
                     <th style={th}>Current Rate</th>
                     <th style={th}>Avg Rate</th>
                     <th style={th}>Avg Launches</th>
@@ -331,9 +334,9 @@ export default function Dashboard() {
                     <tr key={i}>
                       <td style={{ ...td, textAlign: "left", fontFamily: sans, fontWeight: 600 }}>{r.label}</td>
                       <td style={{ ...td, color: r.key === "mar" ? C.purple : C.text, fontWeight: r.key === "mar" ? 600 : 400 }}>{r.cw.toLocaleString()}</td>
+                      <td style={{ ...td, color: C.amber, fontWeight: 600 }}>{r.mtd}</td>
                       <td style={{ ...td, color: C.green }}>{pf(r.adjRate)}</td>
                       <td style={{ ...td, color: C.green, fontWeight: 600 }}>{Math.round(r.adjLaunches)}</td>
-                      <td style={{ ...td, color: C.amber, fontWeight: 600 }}>{r.mtd}</td>
                       <td style={{ ...td, color: C.dim }}>{pf(r.curRate)}</td>
                       <td style={{ ...td, color: C.blue }}>{pf(r.avgRate)}</td>
                       <td style={{ ...td, color: C.blue, fontWeight: 600 }}>{Math.round(r.avgLaunches)}</td>
@@ -342,12 +345,12 @@ export default function Dashboard() {
                   <tr style={{ borderTop: `2px solid ${C.text}` }}>
                     <td style={{ ...td, textAlign: "left", fontFamily: sans, fontWeight: 700, fontSize: 14, borderBottom: "none" }}>Total</td>
                     <td style={{ ...td, borderBottom: "none" }} />
-                    <td style={{ ...td, borderBottom: "none" }} />
-                    <td style={{ ...td, color: C.green, fontWeight: 700, fontSize: 14, borderBottom: "none" }}>{Math.round(model.totalAdj)}</td>
                     <td style={{ ...td, color: C.amber, fontWeight: 700, fontSize: 14, borderBottom: "none" }}>
                       {MTD_TOTAL}
                       <div style={{ fontSize: 10, color: C.dim, fontWeight: 400, fontFamily: sans }}>incl. 14 from pre-Dec '25</div>
                     </td>
+                    <td style={{ ...td, borderBottom: "none" }} />
+                    <td style={{ ...td, color: C.green, fontWeight: 700, fontSize: 14, borderBottom: "none" }}>{Math.round(model.totalAdj)}</td>
                     <td style={{ ...td, borderBottom: "none" }} />
                     <td style={{ ...td, borderBottom: "none" }} />
                     <td style={{ ...td, color: C.blue, fontWeight: 700, fontSize: 14, borderBottom: "none" }}>{Math.round(model.totalAvg)}</td>
@@ -365,7 +368,7 @@ export default function Dashboard() {
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 12 }}>
               <h2 style={{ fontSize: 15, fontWeight: 600, margin: 0 }}>Expected April Launches by Cohort</h2>
               <div style={{ display: "flex", gap: 2, background: C.bg, borderRadius: 6, padding: 2, border: `1px solid ${C.border}` }}>
-                {[{ k: "average", l: "Average" }, { k: "adjusted", l: "Projected" }].map(t => (
+                {[{ k: "average", l: "Average" }, { k: "adjusted", l: "Adjusted" }].map(t => (
                   <button key={t.k} onClick={() => setAprilWaterfallMode(t.k)} style={{
                     background: aprilWaterfallMode === t.k ? C.card : "transparent",
                     color: aprilWaterfallMode === t.k ? C.text : C.muted,
@@ -389,7 +392,7 @@ export default function Dashboard() {
                 <span style={{ fontSize: 11, color: C.dim, marginLeft: 8 }}>target</span>
               </div>
               <div style={{ borderTop: `1px solid ${C.border}`, paddingTop: 16 }}>
-                <div style={{ fontSize: 11, fontWeight: 600, color: C.muted, textTransform: "uppercase", letterSpacing: "0.04em", marginBottom: 12 }}>Projected Activation Rates</div>
+                <div style={{ fontSize: 11, fontWeight: 600, color: C.muted, textTransform: "uppercase", letterSpacing: "0.04em", marginBottom: 12 }}>Adjusted Activation Rates</div>
                 {[
                   { k: "jan", l: "Jan '26", n: `Curr: ${pf(APR_CUR.janM3)}` },
                   { k: "feb", l: "Feb '26", n: `Curr: ${pf(APR_CUR.febM2)}` },
@@ -425,15 +428,18 @@ export default function Dashboard() {
             </div>
 
             <div style={{ background: C.card, border: `1px solid ${C.border}`, borderRadius: 10, padding: "20px 24px", flex: 1, overflowX: "auto" }}>
-              <h2 style={{ fontSize: 15, fontWeight: 600, margin: "0 0 16px" }}>Model Detail</h2>
+              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", marginBottom: 16 }}>
+                <h2 style={{ fontSize: 15, fontWeight: 600, margin: 0 }}>Model Detail</h2>
+                <span style={{ fontSize: 11, color: C.dim }}>Adjusted rates are based on manual inputs</span>
+              </div>
               <table style={{ width: "100%", borderCollapse: "collapse" }}>
                 <thead>
                   <tr>
                     <th style={{ ...th, textAlign: "left" }}>Cohort</th>
                     <th style={th}>Closed Won</th>
-                    <th style={th}>Proj Rate</th>
-                    <th style={th}>Proj Launches</th>
                     <th style={th}>Apr Launches (Act.)</th>
+                    <th style={th}>Adj Rate</th>
+                    <th style={th}>Adj Launches</th>
                     <th style={th}>Current Rate</th>
                     <th style={th}>Avg Rate</th>
                     <th style={th}>Avg Launches</th>
@@ -444,9 +450,9 @@ export default function Dashboard() {
                     <tr key={i}>
                       <td style={{ ...td, textAlign: "left", fontFamily: sans, fontWeight: 600 }}>{r.label}</td>
                       <td style={{ ...td, color: r.key === "apr" ? C.purple : C.text, fontWeight: r.key === "apr" ? 600 : 400 }}>{r.cw.toLocaleString()}</td>
+                      <td style={{ ...td, color: C.amber, fontWeight: 600 }}>{r.mtd || "—"}</td>
                       <td style={{ ...td, color: C.green }}>{pf(r.adjRate)}</td>
                       <td style={{ ...td, color: C.green, fontWeight: 600 }}>{Math.round(r.adjLaunches)}</td>
-                      <td style={{ ...td, color: C.amber, fontWeight: 600 }}>{r.mtd || "—"}</td>
                       <td style={{ ...td, color: C.dim }}>{pf(r.curRate)}</td>
                       <td style={{ ...td, color: C.blue }}>{pf(r.avgRate)}</td>
                       <td style={{ ...td, color: C.blue, fontWeight: 600 }}>{Math.round(r.avgLaunches)}</td>
@@ -455,11 +461,11 @@ export default function Dashboard() {
                   <tr style={{ borderTop: `2px solid ${C.text}` }}>
                     <td style={{ ...td, textAlign: "left", fontFamily: sans, fontWeight: 700, fontSize: 14, borderBottom: "none" }}>Total</td>
                     <td style={{ ...td, borderBottom: "none" }} />
-                    <td style={{ ...td, borderBottom: "none" }} />
-                    <td style={{ ...td, color: C.green, fontWeight: 700, fontSize: 14, borderBottom: "none" }}>{Math.round(aprilModel.totalAdj)}</td>
                     <td style={{ ...td, color: C.amber, fontWeight: 700, fontSize: 14, borderBottom: "none" }}>
                       {APR_MTD_TOTAL || "—"}
                     </td>
+                    <td style={{ ...td, borderBottom: "none" }} />
+                    <td style={{ ...td, color: C.green, fontWeight: 700, fontSize: 14, borderBottom: "none" }}>{Math.round(aprilModel.totalAdj)}</td>
                     <td style={{ ...td, borderBottom: "none" }} />
                     <td style={{ ...td, borderBottom: "none" }} />
                     <td style={{ ...td, color: C.blue, fontWeight: 700, fontSize: 14, borderBottom: "none" }}>{Math.round(aprilModel.totalAvg)}</td>
