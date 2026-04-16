@@ -38,7 +38,8 @@ const cohortHistorical = [
   { c: "Apr 26", cw: 760, m0: 26, m1: 0, m2: 0, m3: 0, nl: 734,  p0: 0.034, p1: 0.034, p2: null, p3: null },
 ];
 
-const AVG = { p0: 0.3135, p1: 0.70469, p2: 0.80298, p3: 0.85165 };
+const MAR_AVG = { p0: 0.30395, p1: 0.70101, p2: 0.80298, p3: 0.85337 }; // milestones matured before Mar '26
+const AVG     = { p0: 0.29635, p1: 0.69572, p2: 0.80076, p3: 0.85165 }; // milestones matured before Apr '26
 const CUR = { decM3: 0.83031, janM2: 0.77407, febM1: 0.62693, marM0: 0.19003 };
 const MTD  = { preJan: 19, jan: 95, feb: 338, mar: 217 };
 const MTD_TOTAL = 683; // includes 14 from pre-Dec '25 cohorts
@@ -60,10 +61,10 @@ const APR_MTD  = { jan: 8, feb: 46, mar: 138, apr: 2 };
 const APR_MTD_TOTAL = 203; // includes 9 from pre-Jan '26 cohorts
 
 const defaultAprAdj = {
-  jan: 0.78765,
-  feb: 0.68534,
-  mar: 0.32224,
-  apr: 0.02590,
+  jan: 0.78395,
+  feb: 0.68176,
+  mar: 0.31087,
+  apr: 0.00197,
 };
 
 const pf = (v) => `${(v * 100).toFixed(1)}%`;
@@ -182,10 +183,10 @@ export default function Dashboard() {
 
   const model = useMemo(() => {
     const rows = [
-      { key: "preJan", label: "Dec '25", cw: FIXED.preJan, avgRate: AVG.p3, curRate: CUR.decM3, adjRate: adjRates.preJan, note: "M3+ avg", mtd: MTD.preJan, prevRate: PREV.preJan },
-      { key: "jan", label: "Jan '26", cw: FIXED.jan, avgRate: AVG.p2, curRate: CUR.janM2, adjRate: adjRates.jan, note: "M2 avg", mtd: MTD.jan, prevRate: PREV.jan },
-      { key: "feb", label: "Feb '26", cw: FIXED.feb, avgRate: AVG.p1, curRate: CUR.febM1, adjRate: adjRates.feb, note: "M1 avg", mtd: MTD.feb, prevRate: PREV.feb },
-      { key: "mar", label: "Mar '26", cw: marchCW, avgRate: AVG.p0, curRate: CUR.marM0, adjRate: adjRates.mar, note: "M0 avg", mtd: MTD.mar, prevRate: PREV.mar },
+      { key: "preJan", label: "Dec '25", cw: FIXED.preJan, avgRate: MAR_AVG.p3, curRate: CUR.decM3, adjRate: adjRates.preJan, note: "M3+ avg", mtd: MTD.preJan, prevRate: PREV.preJan },
+      { key: "jan", label: "Jan '26", cw: FIXED.jan, avgRate: MAR_AVG.p2, curRate: CUR.janM2, adjRate: adjRates.jan, note: "M2 avg", mtd: MTD.jan, prevRate: PREV.jan },
+      { key: "feb", label: "Feb '26", cw: FIXED.feb, avgRate: MAR_AVG.p1, curRate: CUR.febM1, adjRate: adjRates.feb, note: "M1 avg", mtd: MTD.feb, prevRate: PREV.feb },
+      { key: "mar", label: "Mar '26", cw: marchCW, avgRate: MAR_AVG.p0, curRate: CUR.marM0, adjRate: adjRates.mar, note: "M0 avg", mtd: MTD.mar, prevRate: PREV.mar },
     ].map(r => ({
       ...r,
       avgLaunches: r.cw * (r.avgRate - r.prevRate),
