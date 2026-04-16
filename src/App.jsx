@@ -38,10 +38,10 @@ const cohortHistorical = [
   { c: "Apr 26", cw: 760, m0: 26, m1: 0, m2: 0, m3: 0, nl: 734,  p0: 0.034, p1: 0.034, p2: null, p3: null },
 ];
 
-const AVG = { p0: 0.31337, p1: 0.70442, p2: 0.80271, p3: 0.85159 };
-const CUR = { decM3: 0.83273, janM2: 0.77407, febM1: 0.62694, marM0: 0.19002 };
-const MTD  = { preJan: 3, jan: 13, feb: 62, mar: 249 };
-const MTD_TOTAL = 361; // includes 34 from pre-Dec '25 cohorts
+const AVG = { p0: 0.3135, p1: 0.70469, p2: 0.80298, p3: 0.85165 };
+const CUR = { decM3: 0.83031, janM2: 0.77407, febM1: 0.62693, marM0: 0.19003 };
+const MTD  = { preJan: 19, jan: 95, feb: 338, mar: 217 };
+const MTD_TOTAL = 683; // includes 14 from pre-Dec '25 cohorts
 const PREV = { preJan: 0.80626, jan: 0.65679, feb: 0.22408, mar: 0.0 };
 const FIXED = { preJan: 831, jan: 810, feb: 839 };
 
@@ -55,15 +55,15 @@ const defaultAdj = {
 // April model — end-of-March rates as baseline
 const APR_PREV = { jan: 0.77407, feb: 0.62693, mar: 0.19003, apr: 0.0 };
 const APR_FIXED = { jan: 810, feb: 839, mar: 1142 };
-const APR_CUR  = { janM3: 0.78025, febM2: 0.66984, marM1: 0.25044, aprM0: 0.0 };
-const APR_MTD  = { jan: 5, feb: 36, mar: 69, apr: 0 };
-const APR_MTD_TOTAL = 111; // includes 1 from pre-Jan '26 cohorts
+const APR_CUR  = { janM3: 0.78765, febM2: 0.68534, marM1: 0.32224, aprM0: 0.02590 };
+const APR_MTD  = { jan: 8, feb: 46, mar: 138, apr: 2 };
+const APR_MTD_TOTAL = 203; // includes 9 from pre-Jan '26 cohorts
 
 const defaultAprAdj = {
-  jan: 0.78025,
-  feb: 0.66984,
-  mar: 0.25044,
-  apr: 0.0,
+  jan: 0.78765,
+  feb: 0.68534,
+  mar: 0.32224,
+  apr: 0.02590,
 };
 
 const pf = (v) => `${(v * 100).toFixed(1)}%`;
