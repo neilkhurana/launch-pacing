@@ -64,7 +64,7 @@ const defaultAprAdj = {
   jan: 0.79,
   feb: 0.70,
   mar: 0.62,
-  apr: 0.177,
+  apr: 0.187,
 };
 
 const pf = (v) => `${(v * 100).toFixed(1)}%`;
