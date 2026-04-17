@@ -47,10 +47,10 @@ const PREV = { preJan: 0.80626, jan: 0.65679, feb: 0.22408, mar: 0.0 };
 const FIXED = { preJan: 831, jan: 810, feb: 839 };
 
 const defaultAdj = {
-  preJan: 0.831,
-  jan: 0.780,
-  feb: 0.702,
-  mar: 0.183,
+  preJan: 0.82912,
+  jan: 0.77407,
+  feb: 0.62694,
+  mar: 0.19002,
 };
 
 // April model — end-of-March rates as baseline
@@ -61,10 +61,10 @@ const APR_MTD  = { jan: 8, feb: 46, mar: 138, apr: 2 };
 const APR_MTD_TOTAL = 203; // includes 9 from pre-Jan '26 cohorts
 
 const defaultAprAdj = {
-  jan: 0.78395,
-  feb: 0.68176,
-  mar: 0.31087,
-  apr: 0.00197,
+  jan: 0.79,
+  feb: 0.70,
+  mar: 0.62,
+  apr: 0.177,
 };
 
 const pf = (v) => `${(v * 100).toFixed(1)}%`;
