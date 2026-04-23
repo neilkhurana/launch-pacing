@@ -29,17 +29,17 @@ const cohortHistorical = [
   { c: "Jul 25", cw: 637, m0: 220, m1: 268, m2: 53, m3: 25, nl: 71,  p0: 0.345, p1: 0.766, p2: 0.84929, p3: 0.88854 },
   { c: "Aug 25", cw: 618, m0: 209, m1: 224, m2: 59, m3: 35, nl: 91,  p0: 0.338, p1: 0.701, p2: 0.79612, p3: 0.85275 },
   { c: "Sep 25", cw: 641, m0: 239, m1: 223, m2: 65, m3: 36, nl: 78,  p0: 0.373, p1: 0.721, p2: 0.82215, p3: 0.87832 },
-  { c: "Oct 25", cw: 771, m0: 276, m1: 255, m2: 79, m3: 32, nl: 129,  p0: 0.358, p1: 0.689, p2: 0.79118, p3: 0.83268 },
+  { c: "Oct 25", cw: 771, m0: 276, m1: 255, m2: 79, m3: 32, nl: 129,  p0: 0.358, p1: 0.689, p2: 0.79118, p3: 0.83269 },
   { c: "Nov 25", cw: 605, m0: 217, m1: 229, m2: 52, m3: 27, nl: 80,  p0: 0.359, p1: 0.737, p2: 0.82314, p3: 0.86777 },
   { c: "Dec 25", cw: 831, m0: 288, m1: 305, m2: 77, m3: 22, nl: 139,  p0: 0.347, p1: 0.714, p2: 0.80626, p3: 0.83273 },
-  { c: "Jan 26", cw: 810, m0: 218, m1: 314, m2: 95, m3: 13, nl: 170,  p0: 0.269, p1: 0.657, p2: 0.77407, p3: 0.79012 },
-  { c: "Feb 26", cw: 839, m0: 188, m1: 338, m2: 62, m3: 0, nl: 251,  p0: 0.224, p1: 0.627, p2: 0.70083, p3: null },
-  { c: "Mar 26", cw: 1142, m0: 217, m1: 249, m2: 0, m3: 0, nl: 676,  p0: 0.19, p1: 0.408, p2: null, p3: null },
-  { c: "Apr 26", cw: 760, m0: 26, m1: 0, m2: 0, m3: 0, nl: 734,  p0: 0.034, p1: 0.034, p2: null, p3: null },
+  { c: "Jan 26", cw: 810, m0: 218, m1: 314, m2: 95, m3: 14, nl: 169,  p0: 0.269, p1: 0.657, p2: 0.77407, p3: 0.79136 },
+  { c: "Feb 26", cw: 839, m0: 188, m1: 338, m2: 62, m3: 0, nl: 251,  p0: 0.224, p1: 0.627, p2: 0.70084, p3: null },
+  { c: "Mar 26", cw: 1142, m0: 217, m1: 252, m2: 0, m3: 0, nl: 673,  p0: 0.19, p1: 0.411, p2: null, p3: null },
+  { c: "Apr 26", cw: 775, m0: 28, m1: 0, m2: 0, m3: 0, nl: 747,  p0: 0.036, p1: 0, p2: null, p3: null },
 ];
 
 const MAR_AVG = { p0: 0.30395, p1: 0.70101, p2: 0.80298, p3: 0.85337 }; // milestones matured before Mar '26
-const AVG     = { p0: 0.29635, p1: 0.69572, p2: 0.80076, p3: 0.85165 }; // milestones matured before Apr '26
+const AVG     = { p0: 0.31337, p1: 0.70442, p2: 0.80271, p3: 0.85159 }; // milestones matured before Apr '26
 const CUR = { decM3: 0.83031, janM2: 0.77407, febM1: 0.62693, marM0: 0.19003 };
 const MTD  = { preJan: 19, jan: 95, feb: 338, mar: 217 };
 const MTD_TOTAL = 683; // includes 14 from pre-Dec '25 cohorts
@@ -56,9 +56,9 @@ const defaultAdj = {
 // April model — end-of-March rates as baseline
 const APR_PREV = { jan: 0.77407, feb: 0.62693, mar: 0.19003, apr: 0.0 };
 const APR_FIXED = { jan: 810, feb: 839, mar: 1142 };
-const APR_CUR  = { janM3: 0.78765, febM2: 0.68534, marM1: 0.32224, aprM0: 0.02590 };
-const APR_MTD  = { jan: 8, feb: 46, mar: 138, apr: 2 };
-const APR_MTD_TOTAL = 203; // includes 9 from pre-Jan '26 cohorts
+const APR_CUR  = { janM3: 0.79136, febM2: 0.70084, marM1: 0.41068, aprM0: 0.03613 };
+const APR_MTD  = { jan: 14, feb: 62, mar: 252, apr: 28 };
+const APR_MTD_TOTAL = 367; // includes 11 from pre-Jan '26 cohorts
 
 const defaultAprAdj = {
   jan: 0.79,
