@@ -34,16 +34,16 @@ const cohortHistorical = [
   { c: "Dec 25", cw: 831, m0: 288, m1: 305, m2: 77, m3: 25, nl: 136,  p0: 0.347, p1: 0.714, p2: 0.80626, p3: 0.83634 },
   { c: "Jan 26", cw: 810, m0: 218, m1: 314, m2: 95, m3: 27, nl: 156,  p0: 0.269, p1: 0.657, p2: 0.77407, p3: 0.80741 },
   { c: "Feb 26", cw: 839, m0: 188, m1: 338, m2: 109, m3: 10, nl: 194,  p0: 0.224, p1: 0.627, p2: 0.75685, p3: 0.76877 },
-  { c: "Mar 26", cw: 1142, m0: 216, m1: 430, m2: 76, m3: 0, nl: 420,  p0: 0.189, p1: 0.566, p2: 0.63222, p3: null },
-  { c: "Apr 26", cw: 1068, m0: 207, m1: 149, m2: 0, m3: 0, nl: 712,  p0: 0.194, p1: 0.333, p2: null, p3: null },
-  { c: "May 26", cw: 560, m0: 11, m1: 0, m2: 0, m3: 0, nl: 549,  p0: 0.02, p1: 0.02, p2: null, p3: null },
+  { c: "Mar 26", cw: 1142, m0: 216, m1: 430, m2: 81, m3: 0, nl: 415,  p0: 0.189, p1: 0.566, p2: 0.6366, p3: null },
+  { c: "Apr 26", cw: 1068, m0: 207, m1: 155, m2: 0, m3: 0, nl: 706,  p0: 0.194, p1: 0.339, p2: null, p3: null },
+  { c: "May 26", cw: 562, m0: 12, m1: 0, m2: 0, m3: 0, nl: 550,  p0: 0.021, p1: 0.021, p2: null, p3: null },
 ];
 
 const MAR_AVG = { p0: 0.30395, p1: 0.70101, p2: 0.80298, p3: 0.85337 }; // milestones matured before Mar '26
 const AVG     = { p0: 0.31337, p1: 0.70442, p2: 0.80271, p3: 0.85159 }; // milestones matured before Apr '26
 const CUR = { decM3: 0.83634, janM2: 0.77407, febM1: 0.62694, marM0: 0.18914 };
-const MTD  = { preJan: 1, jan: 4, feb: 10, mar: 76 };
-const MTD_TOTAL = 252; // includes 161 from pre-Dec '25 cohorts
+const MTD  = { preJan: 1, jan: 4, feb: 10, mar: 81 };
+const MTD_TOTAL = 264; // includes 168 from pre-Dec '25 cohorts
 const PREV = { preJan: 0.80626, jan: 0.65679, feb: 0.22408, mar: 0.0 };
 const FIXED = { preJan: 831, jan: 810, feb: 839 };
 
