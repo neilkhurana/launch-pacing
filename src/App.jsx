@@ -34,18 +34,18 @@ const cohortHistorical = [
   { c: "Dec 25", cw: 831, m0: 288, m1: 305, m2: 77, m3: 37, nl: 124,  p0: 0.347, p1: 0.714, p2: 0.80626, p3: 0.85078 },
   { c: "Jan 26", cw: 810, m0: 218, m1: 314, m2: 95, m3: 33, nl: 150,  p0: 0.269, p1: 0.657, p2: 0.77407, p3: 0.81481 },
   { c: "Feb 26", cw: 839, m0: 188, m1: 338, m2: 109, m3: 34, nl: 170,  p0: 0.224, p1: 0.627, p2: 0.75685, p3: 0.79738 },
-  { c: "Mar 26", cw: 1142, m0: 216, m1: 430, m2: 176, m3: 58, nl: 262,  p0: 0.189, p1: 0.566, p2: 0.71979, p3: 0.77058 },
-  { c: "Apr 26", cw: 1068, m0: 207, m1: 430, m2: 133, m3: 33, nl: 265,  p0: 0.194, p1: 0.596, p2: 0.72097, p3: 0.75187 },
-  { c: "May 26", cw: 1197, m0: 224, m1: 487, m2: 88, m3: 0, nl: 398,  p0: 0.187, p1: 0.594, p2: 0.6675, p3: null },
-  { c: "Jun 26", cw: 1222, m0: 258, m1: 338, m2: 0, m3: 0, nl: 626,  p0: 0.211, p1: 0.488, p2: null, p3: null },
-  { c: "Jul 26", cw: 793, m0: 61, m1: 0, m2: 0, m3: 0, nl: 732,  p0: 0.077, p1: 0.077, p2: null, p3: null },
+  { c: "Mar 26", cw: 1142, m0: 216, m1: 430, m2: 176, m3: 60, nl: 260,  p0: 0.189, p1: 0.566, p2: 0.71979, p3: 0.77233 },
+  { c: "Apr 26", cw: 1068, m0: 207, m1: 430, m2: 133, m3: 34, nl: 264,  p0: 0.194, p1: 0.596, p2: 0.72097, p3: 0.75281 },
+  { c: "May 26", cw: 1197, m0: 224, m1: 487, m2: 96, m3: 0, nl: 390,  p0: 0.187, p1: 0.594, p2: 0.67419, p3: null },
+  { c: "Jun 26", cw: 1222, m0: 258, m1: 364, m2: 0, m3: 0, nl: 600,  p0: 0.211, p1: 0.509, p2: null, p3: null },
+  { c: "Jul 26", cw: 854, m0: 74, m1: 0, m2: 0, m3: 0, nl: 780,  p0: 0.087, p1: 0.087, p2: null, p3: null },
 ];
 
 const MAR_AVG = { p0: 0.30395, p1: 0.70101, p2: 0.80298, p3: 0.85337 }; // milestones matured before Mar '26
 const AVG     = { p0: 0.31337, p1: 0.70442, p2: 0.80271, p3: 0.85159 }; // milestones matured before Apr '26
 const CUR = { decM3: 0.85078, janM2: 0.77407, febM1: 0.62694, marM0: 0.18914 };
-const MTD  = { preJan: 3, jan: 2, feb: 0, mar: 12 };
-const MTD_TOTAL = 538; // includes 521 from pre-Dec '25 cohorts
+const MTD  = { preJan: 3, jan: 2, feb: 0, mar: 14 };
+const MTD_TOTAL = 588; // includes 569 from pre-Dec '25 cohorts
 const PREV = { preJan: 0.80626, jan: 0.65679, feb: 0.22408, mar: 0.0 };
 const FIXED = { preJan: 831, jan: 810, feb: 839 };
 
