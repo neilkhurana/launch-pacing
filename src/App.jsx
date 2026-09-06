@@ -40,7 +40,7 @@ const cohortHistorical = [
   { c: "Jun 26", cw: 1222, m0: 258, m1: 513, m2: 114, m3: 8, nl: 329,  p0: 0.211, p1: 0.631, p2: 0.72422, p3: 0.73077 },
   { c: "Jul 26", cw: 1139, m0: 243, m1: 511, m2: 27, m3: 0, nl: 358,  p0: 0.213, p1: 0.662, p2: 0.68569, p3: null },
   { c: "Aug 26", cw: 1168, m0: 315, m1: 57, m2: 0, m3: 0, nl: 796,  p0: 0.27, p1: 0.318, p2: null, p3: null },
-  { c: "Sep 26", cw: 200, m0: 3, m1: 0, m2: 0, m3: 0, nl: 197,  p0: 0.015, p1: 0.015, p2: null, p3: null },
+  { c: "Sep 26", cw: 201, m0: 3, m1: 0, m2: 0, m3: 0, nl: 198,  p0: 0.015, p1: 0.015, p2: null, p3: null },
 ];
 
 const MAR_AVG = { p0: 0.30395, p1: 0.70101, p2: 0.80298, p3: 0.85337 }; // milestones matured before Mar '26
