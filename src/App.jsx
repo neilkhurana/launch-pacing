@@ -20,7 +20,7 @@ const mono = "'JetBrains Mono', 'SF Mono', 'Consolas', monospace";
 const sans = "'DM Sans', system-ui, -apple-system, sans-serif";
 
 const cohortHistorical = [
-  { c: "Jan 25", cw: 477, m0: 174, m1: 200, m2: 33, m3: 17, nl: 53,  p0: 0.365, p1: 0.784, p2: 0.85325, p3: 0.88889 },
+  { c: "Jan 25", cw: 477, m0: 174, m1: 199, m2: 33, m3: 17, nl: 54,  p0: 0.365, p1: 0.782, p2: 0.85115, p3: 0.88679 },
   { c: "Feb 25", cw: 437, m0: 133, m1: 177, m2: 35, m3: 23, nl: 69,  p0: 0.304, p1: 0.709, p2: 0.78947, p3: 0.84211 },
   { c: "Mar 25", cw: 535, m0: 129, m1: 217, m2: 58, m3: 29, nl: 102,  p0: 0.241, p1: 0.647, p2: 0.75514, p3: 0.80935 },
   { c: "Apr 25", cw: 572, m0: 143, m1: 225, m2: 53, m3: 37, nl: 114,  p0: 0.25, p1: 0.643, p2: 0.73601, p3: 0.8007 },
@@ -37,17 +37,17 @@ const cohortHistorical = [
   { c: "Mar 26", cw: 1142, m0: 216, m1: 430, m2: 176, m3: 77, nl: 243,  p0: 0.189, p1: 0.566, p2: 0.71979, p3: 0.78722 },
   { c: "Apr 26", cw: 1068, m0: 207, m1: 429, m2: 133, m3: 95, nl: 204,  p0: 0.194, p1: 0.596, p2: 0.72004, p3: 0.80899 },
   { c: "May 26", cw: 1198, m0: 224, m1: 487, m2: 148, m3: 53, nl: 286,  p0: 0.187, p1: 0.593, p2: 0.71703, p3: 0.76127 },
-  { c: "Jun 26", cw: 1222, m0: 258, m1: 513, m2: 114, m3: 35, nl: 302,  p0: 0.211, p1: 0.631, p2: 0.72422, p3: 0.75286 },
-  { c: "Jul 26", cw: 1139, m0: 243, m1: 511, m2: 76, m3: 0, nl: 309,  p0: 0.213, p1: 0.662, p2: 0.72871, p3: null },
-  { c: "Aug 26", cw: 1168, m0: 315, m1: 246, m2: 0, m3: 0, nl: 607,  p0: 0.27, p1: 0.48, p2: null, p3: null },
-  { c: "Sep 26", cw: 690, m0: 58, m1: 0, m2: 0, m3: 0, nl: 632,  p0: 0.084, p1: 0.084, p2: null, p3: null },
+  { c: "Jun 26", cw: 1222, m0: 258, m1: 513, m2: 114, m3: 37, nl: 300,  p0: 0.211, p1: 0.631, p2: 0.72422, p3: 0.7545 },
+  { c: "Jul 26", cw: 1139, m0: 243, m1: 511, m2: 84, m3: 0, nl: 301,  p0: 0.213, p1: 0.662, p2: 0.73573, p3: null },
+  { c: "Aug 26", cw: 1168, m0: 315, m1: 271, m2: 0, m3: 0, nl: 582,  p0: 0.27, p1: 0.502, p2: null, p3: null },
+  { c: "Sep 26", cw: 731, m0: 80, m1: 0, m2: 0, m3: 0, nl: 651,  p0: 0.109, p1: 0.109, p2: null, p3: null },
 ];
 
 const MAR_AVG = { p0: 0.30395, p1: 0.70101, p2: 0.80298, p3: 0.85337 }; // milestones matured before Mar '26
 const AVG     = { p0: 0.31337, p1: 0.70442, p2: 0.80271, p3: 0.85159 }; // milestones matured before Apr '26
 const CUR = { decM3: 0.85319, janM2: 0.77407, febM1: 0.62574, marM0: 0.18914 };
 const MTD  = { preJan: 0, jan: 0, feb: 3, mar: 1 };
-const MTD_TOTAL = 429; // includes 425 from pre-Dec '25 cohorts
+const MTD_TOTAL = 486; // includes 482 from pre-Dec '25 cohorts
 const PREV = { preJan: 0.80626, jan: 0.65679, feb: 0.22288, mar: 0.0 };
 const FIXED = { preJan: 831, jan: 810, feb: 839 };
 
